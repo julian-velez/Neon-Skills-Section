@@ -1,0 +1,150 @@
+/* Reiniciar márgenes y tamaño de caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos del cuerpo */
+  body {
+    background-color: #0d0d0d; /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+  }
+  
+  /* Contenedor de habilidades */
+  .skills-container {
+    text-align: center;
+  }
+  
+  /* Título con efecto de neón */
+  .neon-title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #fff;
+    text-shadow: 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #39ff14; /* Neón verde */
+    animation: neon-flicker 1.5s infinite alternate;
+  }
+  
+  /* Estilos generales para cada habilidad */
+  .skill {
+    margin: 20px 0;
+  }
+  
+  /* Nombre de la habilidad */
+  .skill-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  /* Contenedor de la barra de habilidad */
+  .skill-bar {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    border-radius: 30px;
+    padding: 3px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  /* Barra de nivel de habilidad */
+  .skill-level {
+    height: 20px;
+    border-radius: 30px;
+    position: relative;
+    animation: glow 2s infinite;
+  }
+  
+  /* Colores aplicados con neón */
+  .skill-level.html {
+    background: #39ff14; /* Neon Green */
+    width: 90%;
+    animation: animateSkillHtml 2s ease-out forwards, glow-html 2s infinite;
+  }
+  
+  .skill-level.css {
+    background: #ff1493; /* Hot Pink */
+    width: 80%;
+    animation: animateSkillCss 2s ease-out forwards, glow-css 2s infinite;
+  }
+  
+  .skill-level.js {
+    background: #ff6700; /* Bright Orange */
+    width: 70%;
+    animation: animateSkillJs 2s ease-out forwards, glow-js 2s infinite;
+  }
+  
+  /* Efecto de brillo (neón) para HTML */
+  @keyframes glow-html {
+    0% {
+      box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+    }
+    100% {
+      box-shadow: 0 0 15px #39ff14, 0 0 25px #39ff14, 0 0 35px #39ff14;
+    }
+  }
+  
+  /* Efecto de brillo (neón) para CSS */
+  @keyframes glow-css {
+    0% {
+      box-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 30px #ff1493;
+    }
+    100% {
+      box-shadow: 0 0 15px #ff1493, 0 0 25px #ff1493, 0 0 35px #ff1493;
+    }
+  }
+  
+  /* Efecto de brillo (neón) para JavaScript */
+  @keyframes glow-js {
+    0% {
+      box-shadow: 0 0 10px #ff6700, 0 0 20px #ff6700, 0 0 30px #ff6700;
+    }
+    100% {
+      box-shadow: 0 0 15px #ff6700, 0 0 25px #ff6700, 0 0 35px #ff6700;
+    }
+  }
+  
+  /* Animación del título parpadeante */
+  @keyframes neon-flicker {
+    0% {
+      text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 15px #39ff14;
+    }
+    100% {
+      text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+    }
+  }
+  
+  /* Animación para llenar la barra de HTML */
+  @keyframes animateSkillHtml {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 90%;
+    }
+  }
+  
+  /* Animación para llenar la barra de CSS */
+  @keyframes animateSkillCss {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+  
+  /* Animación para llenar la barra de JavaScript */
+  @keyframes animateSkillJs {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 70%;
+    }
+  }
+  
